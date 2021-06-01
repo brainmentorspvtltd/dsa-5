@@ -1,0 +1,119 @@
+Java
+- Platform Independent
+  - WORA - Write Once Run Anywhere
+- High level
+- Open Source - till java 11
+- OOPS (not fully object oriented)
+
+class Calc  {
+	int x,y;
+	int add() {
+		return x + y;
+	}
+
+	int sub() {
+		return x - y;
+	}
+
+}
+
+
+3 major type of programming :
+- procedural - Functions - Divide a problem into functions
+- oops - wrap all the variables and functions into a single unit
+- functional - python, javascript
+
+Setup Java
+JDK
+- Java Compiler
+- javadoc (java documentation)
+- jar - java archive
+
+Java Installation
+1. Download Java 11
+2. Set path in environment variable
+3. Copy path till bin folder and paste in envrionment variable
+
+VS Code - Editor
+Eclipse - IDE (Integrated Development Environment)
+
+Java SE - Standard Edition
+Java EE - Enterprise Edition
+
+Creating first program in java
+- Every java prpgram start with class
+- Class name should start with capital letter
+- Class name should be same as file name
+- Class name starts with either alphabet or special symbol(_, $)
+
+javac ClassName.java
+- compile the code
+
+java ClassName
+- execute the code
+
+javac comes from JDK 
+java  comes from JRE, Now JRE starts searching for main
+
+
+Main method
+- Entry point of any program
+- without main java will compile the code and convert it into byte code, but it cannot execute the code or interpret the code
+
+
+public - global, which is accessible for all, from anywhere
+private - accessible within the class only
+protected - can be accessed inside the package, can also be accessed outisde the package by using inheritance.
+default - it's not a reserved keyword, if you will not specify any scope then it is default. The scope can be accessed by any class but within same package
+
+
+Why main is public ?
+- JRE uses main : java <ByteCode>
+- Java command triggers JRE
+- JRE starts searching for main method
+- JRE load our class into memory
+- JRE is outside our code directory.
+
+Why Static ?
+- Static things are loaded into memory when class is loaded.
+
+Why void ?
+- main return nothing, because main is entry point.
+
+Main arguments - String args[]
+- we can make our own commands
+- we can pass any number of arguments, that's why it is array
+- data type of command line arguments could be anything, so it convert all the arguments to one single type, i.e., string
+
+
+System.out.println
+- println - print in new line, println comes from out object
+- out - out is an object, which belongs to PrintStream class
+- System is a class used for input, output and error
+  - System.in, System.out, System.err
+
+Local variables must be initialised before use
+
+java ClassName 10
+java ClassName 10 20
+java ClassName 10 30 40 50
+java ClassName 10 90 12 12 34 56 67
+
+
+Why java is slow ?
+
+2 phases of JVM
+- loading
+  - Bootstrap Classloader
+  - Extension ClassLoader
+- linking
+  - Verify
+  - prepare
+
+rt.jar
+
+Dynamic class loading - ClassLoader subsystem
+
+Dynamic linking
+Run-time interpreter
+
