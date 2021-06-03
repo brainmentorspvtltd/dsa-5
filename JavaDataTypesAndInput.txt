@@ -1,0 +1,83 @@
+Data Types
+- Primitive
+- Non-primitive (Reference data type)
+
+1. primitive are pre-defined, non-primitive are user defined
+2. primitive can store only single value, non-primitive can store value
+3. non-primitive are generally derived from primitive
+4. primitive have fixed memory size, non-primitive has dynamic memory allocation
+
+- primitive cannot store null, non-primitve can be null
+- primitive do not have any methods, non-primitive has methods
+- primitive do not have any references, non-primitive has references
+
+
+Integers
+- byte  - 1 byte
+- short - 2 bytes
+- int   - 4 bytes
+- long  - 8 bytes
+
+Enter the age : byte
+1 byte = 8 bit
+1 bit +, -
+-2 ^ 7 to 2 ^ 7 - 1
+-128 to 127
+
+Use of bytes data type
+- small range of values
+- Networking
+- File Handling
+
+For decimal we have :
+- Float
+- Double
+
+strictfp
+
+Char - 2byte
+- hold only single character
+
+
+Taking Input in Java
+
+System.in - works like a channel
+System.out
+System.err
+
+Scanner
+- is a buffer
+- will collect buffered input
+
+Localization
+
+Employee Salary Slip
+=================================================
+Emp ID :
+Emp Name :
+Emp Basic Salary : 20000
+Earnings
+HRA : House Rent Allowance : 30%
+DA : Dearness Allowance : 15%
+TA : Travelling Allowance : 20%
+MA : Medical Allowance : 15%
+Deductions
+PF : Provident Fund : 10%
+TDS : Tax Deducted at Source : 10%
+=================================================
+Net Salary = Basic Salary + Earnings - Deductions
+
+
+Loops
+If-Else
+Switch
+
+
+
+
+
+
+
+
+
+
