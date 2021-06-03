@@ -1,0 +1,34 @@
+OOPS
+
+2 major type of programming
+- Procedural - we divide a problem into functions
+- OOPS - Wraps the code into a single unit known as class
+
+- Class - category/blue-print/skeleton/structure
+- Object - that belongs to a particular class/category
+  - every object has a unique identity
+  - real world entity
+
+OOAD - Object Oriented Analysis and Design
+S O L I D
+SRP - Single Responsibility Principle
+DRY - Do not Repeat Yourself
+
+
+Data Hiding
+Encapsulation
+Good Encapsulation
+
+Constructor
+- when we make a class, there is a by default const.
+- Constructor is automatically called when we create object
+- It will initalise values
+
+When we include parametrized const. than 
+- default const will be used to store common variables
+
+
+
+
+
+
