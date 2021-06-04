@@ -1,0 +1,59 @@
+POJO - Plain Old Java Object
+SRP
+DRY
+
+Getter and Setter
+
+primary - never changing variables
+secondary - change in future...
+
+Relationships
+- IS-A (Inheritance)
+- HAS-A (communicating with class by making object in another class)
+
+1. no reusability in code
+2. polymorphism
+
+Polymorphism
+- one thing having several form
+- creating function with same name but each function perform different task
+
+- Why create function with same name ?
+
+- if we don't want the functionality of parents function than create the function with same, then it will hide parent's functionality
+
+Overriding is example of polymorphism,
+but overriding is only possiblw when there is inheritance
+
+Overloading is performed when we pass argument
+Overriding means to update the parent's method
+
+
+Polymorphic
+
+Upcasting - means to cast yourself up, means only upper features will work
+
+Downcasting
+
+final
+- class
+- method
+- variable
+
+super vs this
+overriding rules
+overloading rules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
