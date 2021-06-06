@@ -1,0 +1,78 @@
+Covariant return type
+Overloading
+Wrapper
+Autoboxing
+Abstract
+Interface
+
+Overriding
+- to update the functionality of parent...
+
+Covariant
+- we can change the return type while doing overriding...
+- we can return more features in overrided functions
+
+Overloading
+- number of arguments can be different
+- type of arguments can be different
+- order of arguments can be different.
+
+Overloading vs Overriding
+- Overriding is based on IS-A relation
+- No need of IS-A relation in overloading
+
+- In overriding arguments must be same, return type can be covariant
+- In overloading arguments can be different, and it is not dependent on return type
+
+- Concept of weaker access is only for overriding
+- No weaker access concept for overloading
+
+- We use overriding when we want to change logic,but keep method signature same
+- We use overloading when we want same logic with different method signatures.
+
+TypePromotion
+- int
+- widening
+- wrapper (same type)
+- var args (either same or widening)
+
+Abstract Class
+- object cannot be created
+- we can declare abstract or concrete methods in abstract class
+- normal class cannot have the abstract methods
+
+Abstract Method
+- when a methods will have definition only in abstract class and implementation in child class
+- method without a body is abstract method...??????????
+- abstract method can never be final
+
+
+Why we create abstract method ?
+- we are setting a standard
+- logic will be different in child class, but standard will be same for all, it is providing standardisation
+
+
+Interfaces
+- 100% abstract, while abstract class is partial abstract
+- Prototype
+
+Prototype - what to do
+Class     - how to do
+
+
+- we can't extend 2 abstract classes, but we can implement any number of interfaces
+- interfaces have all the methods abstract, abstract class will have  abstract as well as concrete methods...
+- interfaces are not flexible
+
+Interface Use Ways
+- Class way (once class is created now objects will keep on creating)
+- Object way (now when we create object, then class will be created)
+  - 
+- Lambda Expression
+
+
+
+
+
+
+

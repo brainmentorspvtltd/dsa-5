@@ -1,0 +1,42 @@
+I18N
+
+1. create new file with .properties extension
+
+super vs this
+override method vs variables
+ - methods are always bind with objects
+ - variables are always bind with class type
+multilevel hierarchy
+
+
+
+Overriding rules
+1. Weaker access rule
+  - to update feature
+  - method signature must be same
+how to change method signature...
+ - scope - private, default, protected, public
+ - packages - collection of similar classes - modularity
+	- com (commercial)
+	- org (organization)
+	com.companyName.ProjectName.Module.SubModule
+
+I want access the member variables of a class outside the package, and those variables should not be public, then what is the procedure ?
+- make member variables protected and inherit the particular where you want to access those variables...
+
+private < default < protected < public
+
+
+2. Covariant return type rule
+
+
+
+
+
+
+
+
+
+
+
+
