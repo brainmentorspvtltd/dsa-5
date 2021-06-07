@@ -1,0 +1,65 @@
+Multiple Inheritance
+Default
+Static
+Memory Management
+Strings / StringBuffer / StringBuilder
+
+=====================================
+Multiple Inheritance
+- Only supported in interface
+- Interfaces will not conflict because interfaces are binded with there names, Classes are binded with there object...
+=====================================
+
+Default Keyword
+
+Interfaces are 100% abstract...???????? 
+- Interfaces are not flexible
+======================================
+From java 8 onwards :
+Interfaces are not 100% abstract...because they have default keyword
+
+
+Static
+- When we create object of class then it makes that number of copies
+- So we take static, it will come to memory only once and then we can keep on changing that variable...
+
+Utility Class
+- no one can inherit
+- no one can make object
+- static methods
+
+==============================================
+Memory Management
+- JRE -> JVM - Class Loading + Class Linking (1500+)
+- The memory where class are loaded are known as Perm/Meta Space (size is fixed - 512mb)
+- Stack will be created where functions will execute one by one + local variables, Stack size is around 4 or 5 mb
+- We also have a heap where objects are stored, Heap size is 4 or 8 or 16gb
+- Because heap is too large, so it is divided into 2 parts
+  - young gen
+    - eden space -> Survivor 1 -> Survivor 2
+  - old gen
+- When a new object is created then it is saved in eden(new) space
+- Behind the scene there is program running GC, Garbage Collector, it is a thread.
+- Thread is code in execution, example main is a thread...
+- GC is a slave thread, and main is a master thread
+
+============================================================
+
+Strings
+- Internally char[]
+- String name = "Ravi";
+- Internally char[] = {'R', 'a', 'v', 'i'};
+- String is pre-defined class
+- String is a final class, so we can't inherit
+- String objects can be created in 2 ways:
+  String name = "Ravi"; 	    // Literal Style
+  String name = new String("Ravi") // Object Style
+- String objects are immutable
+
+Methods - uppercase, indexof, splits, equals, length
+
+
+
+
+
+
