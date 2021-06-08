@@ -1,0 +1,44 @@
+Strings
+- String name = "Ravi";
+- String name = new String("Ravi");
+
+- String Pool
+
+- StringBuffer
+  - it is for single threaded programs
+- StringBuilder - methods are not synchronized
+===================================================
+
+Exception Handling
+
+Exception - abnormal condition
+
+try
+catch
+finally
+throw
+throws
+
+Exceptions 
+- pre-defined
+- user-defined
+
+Try with resources
+try-catch-finally
+try-with-resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

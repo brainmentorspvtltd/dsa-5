@@ -22,9 +22,7 @@ public class StringDemo {
 		System.out.println(h == t);
 		
 		// by default it will create array of 16 size
-//		StringBuffer sb = new StringBuffer();
-		StringBuffer sb = new StringBuffer(200);
-//		sb.ensureCapacity(250);   // formula will work after 250
+		StringBuffer sb = new StringBuffer();
 		System.out.println(sb.capacity() + "," + sb.length());
 		sb.append("hello");
 		System.out.println(sb.capacity() + "," + sb.length());
@@ -35,13 +33,32 @@ public class StringDemo {
 //		there is a formula : old_capacity * 2 + 2
 //		+2 (for null character)
 		
-		sb.append("hello how are you  ??");
-		System.out.println(sb.capacity() + "," + sb.length());
-		sb.append("hello how are you ??");
+		
+		sb.append("hello...sdfkjhsdkjfhdskjfhdskjfhsdkfhskdjfhkjdshfkjsdfhksjdfhkjsdhfsdhfsdfhsdkjhfkjsdhfkjsdhfkjsdhfkjsdhkjfhds");
 		System.out.println(sb.capacity() + "," + sb.length());
 		
-		sb.append("hello how are you iiii ??");
+		sb.append("hello");
 		System.out.println(sb.capacity() + "," + sb.length());
+		
+		
+		// Fix size buffer
+		StringBuffer sb2 = new StringBuffer(200);
+		System.out.println(sb2.capacity() + "," + sb2.length());
+		sb2.append("hello");
+		System.out.println(sb2.capacity() + "," + sb2.length());
+		
+		sb2.ensureCapacity(250);
+		
+		sb2.append("hello...sdjfhskdfhksjdhfksdhjkfhsdkjfhsdkjfhsdkjfhsdkjhfkjsdhfkjsdhfkjsdhkfjhsdkjfhsdkjfhsdkjfhksdjhfkjdshfkjdshfjksdhfkjsdhfksdhkfdhskjfhksj");
+		System.out.println(sb2.capacity() + "," + sb2.length());
+		
+		
+//		String Builder
+		StringBuilder sb3 = new StringBuilder(200);
+		System.out.println(sb3.capacity() + "," + sb3.length());
+		sb3.append("hello");
+		System.out.println(sb3.capacity() + "," + sb3.length());
+		
 		
 	}
 
