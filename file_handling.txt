@@ -1,0 +1,42 @@
+File Handling
+
+- read
+- write
+
+Streams - Flow of data
+
+InputStream
+OutputStream
+
+- text -> Reader, Writer
+- bytes -> InputStream, OutputStream
+
+Byte by Byte data read write
+- FileInputStream
+- FileOutputStream
+
+Buffer data read write
+- BufferedInputStream
+- BufferedOutputStream
+
+Object read and write
+- ObjectInputStream
+- ObjectOutputStream
+
+
+IS-A Serialization
+- If we serialize parent than child be serialized automatically...
+Another Case
+- Only child class is serializable
+- it will serialize child and parent both...but it won't deserialize parent...it will only call parent constructor...
+
+HAS-A Serialization
+
+
+
+
+
+
+
+
+
