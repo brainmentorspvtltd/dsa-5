@@ -1,0 +1,184 @@
+DS Algo
+
+What ?
+Data Structure
+- the way how we structure data
+- organize the data
+- to store data in memory efficiently
+- management or modification of data
+
+- collection of data values
+- relationship among the values of data
+- functions and operations can be applied on data
+
+CRUD - Create Read Update Delete, Sorting, Searching
+
+
+Why ?
+- Google Map - Shortest Path
+- Music Playlist / Browser Navigation
+
+Stack - Undo Operations
+Graph - Social Networking Sites
+Tree  - Folders in OS
+Queue - OS Scheduling / handle networking congestion
+====================================================
+
+Algorithm
+- Sequential steps for solving a problem
+
+
+Measures of Performace
+- Time
+  - amount of processing or number of operations code has to perform to accomplish it's objective
+- Space or Extra Space
+  - memory needed by code to store information at runtime
+  - disk space needed by code for persistance storage
+- Network
+  - bandwidth used by code to pass info to clients or other machines
+
+i5 16GB 1TB HDD
+i9 32GB 1TB SSD
+==================================================
+
+Time taken is always proportional to the number of operations and input size
+
+time taken = number of operations * Input Size
+
+Space Complexity
+==================================================
+
+Asymptotic Notations
+
+Big Omega - Best Case		- Constant
+Theta     - Average Case	- Linear (Based on some condition)
+Big O 	  - Worst Case		- Linear
+
+For example : if we want to search an element in array
+best case - element is present at 0th index
+worst case - elements is not present / element is at last index
+
+Order of growth
+- ignore lower order terms
+- ignore leading term constant
+
+===================================================
+Total Processing = Number of times each element get processed * number of elements (input)
+
+example 1 : 
+for(i = 0; i < 100; i++) {
+	// Something constant
+}
+Time Complexity : c * 100 = O(1)
+
+
+example 2 : 
+for(i = 0; i < n; i++) {
+	// Something constant
+}
+Time Complexity : c * n = O(n)
+
+
+example 3 : 
+compute(){
+    if(n % 2 == 0) {
+	return;
+    }
+    for(i = 0; i < n; i++) {
+	// Something constant
+    }
+}
+
+Time Complexity : c * n = O(n) // we always compute on basis of worst case
+
+
+example 4: 
+compute(){
+    for(i = 0; i < n; i++) {
+	for(j = 0; j <= n; j++){
+	    	// Something constant
+	}
+    }
+}
+
+Time Complexity : O(n ^ 2)
+
+
+example 5: 
+compute(){
+    for(i = 0; i < n; i++) {
+	for(j = 0; j <= n; j++){
+		break;
+	    	// Something constant
+	}
+    }
+}
+
+Time Complexity : O(n)
+
+
+example 6: 
+compute(){
+    for(i = 0; i < n; i=i*c) {
+	// Something constant
+    }
+}
+3 ^ 0, 3 ^ 1, 3 ^ 2 .... 3 ^ k
+Time Complexity : O(logcn) (base 3)
+
+
+example 7: 
+compute(){
+    for(i = n/2; i <= n; i++) {
+	for(j = 1; j <= n; j=j*2){
+	    	// Something constant
+	}
+    }
+}
+
+Time Complexity : nlogn
+
+
+example 8: 
+compute(){
+    for(i = 0; i <= n; i++) {
+        for(k = 1; k <= n; k=k*2) {
+	    for(j = 1; j <= n; j=j*2){
+	    	// Something constant
+	    }
+        }
+    }
+}
+Time Complexity : n(logn) ^ 2
+
+
+example 9:
+void compute() {
+    for(i = 0; i < n; i++) {
+	// Something constant
+    }
+    for(i = 0; i < n; i*2) {
+	// Something constant
+    }
+    for(i = 0; i < 10; i++) {
+	// Something constant
+    }
+}
+Time Complexity : O(n) + 0(logn) + 0(1) = 0(n)
+
+
+Rate of growth
+Constant	1
+Logarthmic	logn
+Linear		n
+Linear Log	nlogn
+Quadratic	n^2
+Cubic		n^3
+Exponential	2^n
+
+
+
+
+
+
+
