@@ -1,0 +1,112 @@
+Array
+- collection of similar type of items
+- contiguous memory allocation
+- access using index
+- store data in linear fashion
+- index start from 0
+
+Good Parts of Array
+- Random Access : base address + index * size
+- Cache friendly : faster access
+
+int x[] = {10,20,30};
+int []x = {10,20,30};
+int x[] = new int[]{10,20,30};
+int x[] = new int[5];
+
+Dynamic Array
+- Arraylist in Java : default size is 10
+  - after 10 elements it doubles the array
+- Vector in c++
+
+- no fixed size
+- no contiguous memory
+
+average time complexity (Amortalized Complexity)
+= Number of operations / number of insertions
+
+10 elements insert in array O(1) + copy elements from old array that takes O(10) + Next 10 element insert in array O(10) / 20
+10 + 10 + 10 / 20
+30 / 20
+O(1)
+
+==================================================
+Find duplicate element in Array
+Time : O(n) and Space : O(1)
+arr = [1,2,3,5,6,7,1]
+1. traverse from 0 to n-1
+2. check for sign 
+   if arr[Math.abs(arr[i])] >= 0, then
+      make it negative : arr[Math.abs(arr[i])] = -arr[Math.abs(arr[i])]
+   else // arr[Math.abs(arr[i])] is negative
+      this (ith element) element is a repetition
+==================================================
+
+Reverse Array (Two pointer)
+
+==================================================
+
+Leader Element in Array
+- an element is leader if it is greater than all the elements to its right side elements...
+arr = [50,12,34,6,26,8,11,10]
+o/p = 50, 34, 26, 11, 10
+
+==================================================
+
+Find the missing number
+arr = {2,3,6,7,8,5}
+o/p = 4
+
+XOR
+0 0 = 0
+1 1 = 0
+0 1 = 1
+1 0 = 1
+
+==================================================
+
+Zig Zag Array
+a < b > c < d > e < f > g
+arr = [4,7,6,1,5,9,10]
+o/p = 4,7,1,6,5,10,9
+
+arr[i] > arr[i + 1] : swap
+arr[i] < arr[i + 1] : swap
+
+==================================================
+Pair Sum
+arr = [1,4,5,6,3,6,8]
+k = 10
+pair : 6,4
+
+Approach 1 - Naive solution - nested loop
+Approach 2 - Hashing / HashTable
+Approach 3 - Two Pointer
+  - arr[i] + arr[j] == k : return
+  - arr[i] + arr[j] < k : i++
+  - arr[i] + arr[j] > k : j--
+==================================================
+
+Unique Element
+arr = [2,2,4,4,5,6,6,7,7]
+o/p = 5
+==================================================
+
+Sort array which contains only 0 and 1
+arr = [0,0,1,1,1,0,0,1,0,0,1,1,0]
+o/p = [0,0,0,0,0,0,0,1,1,1,1,1,1]
+
+==================================================
+
+DNF - Dutch National Flag
+Sort array which contains 0, 1 and 2
+arr = [0,0,2,1,1,2,0,2,0,0,1,2,0]
+o/p = [0,0,0,0,0,0,1,1,1,2,2,2,2]
+
+==================================================
+
+First, Second, Third Largest
+
+
+
+
