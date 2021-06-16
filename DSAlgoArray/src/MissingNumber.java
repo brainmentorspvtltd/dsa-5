@@ -12,11 +12,11 @@ public class MissingNumber {
 //		int total = (n + 1) * (n + 2) / 2;
 //		int missing = total - sum;
 		
-		int arr[] = {21,23,26,24,25};
+		int arr[] = {1,2,3,4,5,6};
 		int x = 0;
 		int y = 0;
-		int min = 21;
-		int max = 26;
+		int min = 1;
+		int max = 7;
 		for(int i = 0; i < arr.length; i++) {
 			x = x ^ arr[i];
 		}
