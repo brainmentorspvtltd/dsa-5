@@ -1,0 +1,83 @@
+Single Number
+- every element appears twice, except for one
+- find the number appearing odd number of times
+======================================================
+
+How many numbers are smaller than the current number ?
+arr = {8,1,2,2,3}
+o/p = [4,0,1,1,3]
+
+Pre-computation Technique
+Prefix Sum
+for(int i = 1 to n) {
+   arr[i] += arr[i - 1]
+}
+- we can create prefix array or we can change original one
+
+TC : O(Q + N)
+
+if(left == 0) {
+   return arr[right];
+}
+
+======================================================
+
+Prefix Max
+pmax[n]
+pmax[0] = arr[0]
+for(i = 1 to N - 1) {
+  pmax[i] = max(pmax[i - 1], arr[i])
+}
+
+Suffix Max
+smax[n]
+smax[n - 1] = arr[n - 1]
+for(i = n - 2; i >= 0; i--) {
+    smax[i] = max(smax[i + 1], arr[i])
+}
+
+Maximise the expression problem
+given arr = {} and p,q,r
+solve the expression : Max(p*arr[i] + q*arr[j] + r*arr[k])
+but the condition is : i < j < k
+
+Example : 
+Input : 
+arr[] = {1,2,3,4,5}
+p = 1, q = 2, r = 3
+Output : 26
+
+Hint : Try Brute force and Prefix Max
+
+======================================================
+Water trapping Problem (Google, Facebook, Goldman Sach, Amazon, MS)
+
+we need to figure out tallest pillar in left and tallest pillar in right and min of (tallest left, tallest right)
+
+h1 = tallest pillar of left
+h2 = tallest pillar of right
+amount = 0;
+decidingHeight = min(h1, h2);
+if(decidingHeight > currentPillar) {
+   amount += decidingHeight - currentPillar
+}
+
+======================================================
+Max Chunks To Make Sorted
+Hint : Prefix Max
+======================================================
+
+Best Time to Buy and Sell Stock
+
+======================================================
+
+Missing 2 numbers in array
+
+======================================================
+
+
+
+
+
+
+
