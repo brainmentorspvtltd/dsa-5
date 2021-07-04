@@ -1,0 +1,34 @@
+class Solution {
+    
+    public int bsearch(int arr[], int target, int lo, int hi){
+        if(lo>hi)
+            return -1;
+        int mid=(hi+lo)/2;
+        
+        if(arr[mid]==target){
+            return mid;
+        }
+        else if(arr[mid]>=arr[lo]){
+            if(target<=arr[mid] && target>=arr[lo]){
+               return  bsearch(arr,target,lo, mid-1);
+            }
+            else{
+                return bsearch(arr,target, mid+1,hi);
+            }
+        }
+        else if(arr[mid]<=arr[hi]){
+            if(target>=arr[mid] && target<=arr[hi]){
+                return bsearch(arr,target, mid+1,hi);
+            }
+            else{
+                return bsearch(arr,target,lo, mid-1);
+            }
+        }
+        return -1;
+    }
+    
+    public int search(int[] nums, int target) {
+        
+       return  bsearch(nums,target, 0, nums.length-1);
+    }
+}
