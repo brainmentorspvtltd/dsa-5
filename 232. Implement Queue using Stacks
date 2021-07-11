@@ -1,0 +1,113 @@
+class MyQueue {
+
+    Stack<Integer> st;
+    /** Initialize your data structure here. */
+    public MyQueue() {
+         st=new Stack<Integer>();
+    }
+    
+    /** Push element x to the back of queue. */
+    public void push(int x) {
+        st.push(x);
+    }
+    
+    /** Removes the element from in front of queue and returns that element. */
+    public int pop() {
+        if(st.size()==1){
+            return st.pop();
+        }
+        else{
+            int data=st.pop();
+            int res=pop();
+            st.push(data);
+            return res;
+        }
+    }
+    
+    /** Get the front element. */
+    public int peek() {
+         if(st.size()==1){
+            return st.peek();
+        }
+        else{
+            int data=st.pop();
+            int res=peek();
+            st.push(data);
+            return res;
+        }
+    }
+    
+    /** Returns whether the queue is empty. */
+    public boolean empty() {
+        return st.empty();
+    }
+}
+
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue obj = new MyQueue();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.peek();
+ * boolean param_4 = obj.empty();
+ */
+
+
+
+// class MyQueue {
+
+//     Stack<Integer> st;
+//     /** Initialize your data structure here. */
+//     public MyQueue() {
+//         st=new Stack<Integer>();
+//     }
+    
+//     /** Push element x to the back of queue. */
+//     public void push(int x) {
+//         st.push(x);
+//     }
+    
+//     /** Removes the element from in front of queue and returns that element. */
+//     public int pop() {
+//         Stack<Integer> temp=new Stack<Integer>();
+        
+//         while(st.size()>1){
+//             temp.push(st.pop());
+//         }
+//         int data= st.pop();
+//         while(temp.empty()==false){
+            
+//             st.push(temp.pop());
+//         }
+//         return data;
+//     }
+    
+//     /** Get the front element. */
+//     public int peek() {
+//         Stack<Integer> temp=new Stack<Integer>();
+        
+//         while(st.size()>1){
+//             temp.push(st.pop());
+//         }
+//         int data=st.peek();
+//         while(temp.empty()==false){
+            
+//             st.push(temp.pop());
+//         }
+//         return data;
+//     }
+    
+//     /** Returns whether the queue is empty. */
+//     public boolean empty() {
+//         return st.empty();
+//     }
+// }
+
+// /**
+//  * Your MyQueue object will be instantiated and called as such:
+//  * MyQueue obj = new MyQueue();
+//  * obj.push(x);
+//  * int param_2 = obj.pop();
+//  * int param_3 = obj.peek();
+//  * boolean param_4 = obj.empty();
+//  */
