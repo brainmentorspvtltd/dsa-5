@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeMap;
@@ -303,6 +305,57 @@ public class BinaryTreeOperations {
 		}
 		verticalOrder(root.left, distance-1, map);
 		verticalOrder(root.right, distance+1, map);
+	}
+	
+	class Pair<T> {
+		BinaryTree<T> node;
+		int level;
+		Pair(BinaryTree<T> node, int level) {
+			this.node = node;
+			this.level = level;
+		}
+	}
+	
+	// BFT
+	void verticalOrderIter(BinaryTree<Integer> root) {
+		LinkedList<Pair<Integer>> queue = new LinkedList<BinaryTreeOperations.Pair<Integer>>();
+		HashMap<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
+		queue.add(new Pair<Integer>(root, 0));
+		int minDist = 0, maxDist = 0;
+		while(!queue.isEmpty()) {
+			int size = queue.size();
+			while(size > 0) {
+				Pair<Integer> pair = queue.removeFirst();
+				minDist = Math.min(minDist, pair.level);
+				maxDist = Math.max(maxDist, pair.level);
+				
+				map.putIfAbsent(pair.level, new ArrayList<Integer>());
+				map.get(pair.level).add(pair.node.data);
+				
+				if(pair.node.left != null) {
+					queue.add(new Pair<Integer>(pair.node.left, pair.level - 1));
+				}
+				else if(pair.node.right != null) {
+					queue.add(new Pair<Integer>(pair.node.right, pair.level + 1));
+				}
+				size--;
+				
+//				if(map.get(pair.level) == null) {
+//					List<Integer> list = new ArrayList<Integer>();
+//					list.add(pair.node.data);
+//					map.put(pair.level, list);
+//				}
+//				else {
+//					List<Integer> list = map.get(pair.level);
+//					list.add(pair.node.data);
+//					map.put(pair.level, list);
+//				}
+				
+			}
+		}
+		for(int i = minDist; i <= maxDist; i++) {
+			System.out.println(i + " " + map.get(i));
+		}
 	}
 	
 	public void topView(BinaryTree<Integer> root) {
